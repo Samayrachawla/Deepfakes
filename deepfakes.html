@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysing Deepfakes 1.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysing Deepfakes 1.0</h1>
+        <div class="upload-section">
+            <div class="upload-box">
+                <h2>Upload Deepfake Videos</h2>
+                <input type="file" id="deepfake-input" multiple accept="video/*">
+                <button onclick="uploadVideos('deepfake')">Submit Deepfakes</button>
+            </div>
+            <div class="upload-box">
+                <h2>Upload Normal Videos</h2>
+                <input type="file" id="normal-input" multiple accept="video/*">
+                <button onclick="uploadVideos('normal')">Submit Normal Videos</button>
+            </div>
+        </div>
+        <div id="counter">Videos Uploaded: 0</div>
+        <div id="message"></div>
+        <div class="analyze-section">
+            <h2>Analyze Videos</h2>
+            <button onclick="checkDeepfakeStatus()">Analyze</button>
+            <div id="analysis"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
